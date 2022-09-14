@@ -48,7 +48,7 @@
 
 - belongs_to :user
 - belongs_to :User
-- has_one :shipping-address
+- has_one :shipping_address
 
 ## Shipping_Addressesテーブル
 
@@ -59,7 +59,7 @@
 | city                | string     | null: false                    |
 | addresses           | string     | null: false                    |
 | building            | string     |                                |
-| phone-number        | string     | null: false                    |
+| phone_number        | string     | null: false                    |
 | order               | references | null: false, foreign_key: true |
 
 ### Association
