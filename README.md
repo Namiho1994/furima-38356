@@ -47,8 +47,9 @@
 ### Association
 
 - belongs_to :user
-- belongs_to :User
+- belongs_to :item
 - has_one :shipping_address
+
 
 ## Shipping_Addressesテーブル
 
