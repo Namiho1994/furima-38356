@@ -1,5 +1,5 @@
 class Item < ApplicationRecord
-
+  extend ActiveHash::Associations::ActiveRecordExtensions
 
   #belongs_to :user
   #has_one :order
@@ -18,8 +18,9 @@ class Item < ApplicationRecord
   validates :shipping_fee_status_id, presence: true
   validates :prefecture_id, presence: true
   validates :item_scheduled_delivery_id, presence: true
-  validates :price, presence: true, numericality: { greater_than_or_equal_to: 300, less_than_orequal_to: 9_999_999 }
+  validates :price, presence: true, numericality: { greater_than_or_equal_to: 300, less_than_orequal_to: 9_999_999 }, format: { with: /\A[0-9]+\z/ }
   validates :user_id, presence: true
+  validates :image, presence: true
 
 
   validates :category_id, numericality: { other_than: 0 } 
