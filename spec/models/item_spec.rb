@@ -1,4 +1,4 @@
-require 'rails_helper'  
+require 'rails_helper'
 RSpec.describe Item, type: :model do
   before do
     @item = FactoryBot.create(:item)
@@ -91,8 +91,8 @@ RSpec.describe Item, type: :model do
       it '価格は半角数値でないと保存できない' do
         @item.price = '１００'
         @item.valid?
-        expect(@item.errors.full_messages).to include("Price is not a number")
+        expect(@item.errors.full_messages).to include('Price is not a number')
       end
     end
-  end    
+  end
 end
